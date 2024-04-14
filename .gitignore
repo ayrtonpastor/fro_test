@@ -1,0 +1,56 @@
+####### api #######
+# Ignore bundler config.
+sismobase/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+sismobase/log/*
+sismobase/tmp/*
+!/sismobase/log/.keep
+!/sismobase/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+sismobase/tmp/pids/*
+!/sismobase/tmp/pids/
+!/sismobase/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+sismobase/storage/*
+!/sismobase/storage/.keep
+sismobase/tmp/storage/*
+!/sismobase/tmp/storage/
+!/sismobase/tmp/storage/.keep
+
+# Ignore master key for decrypting credentials and more.
+sismobase/config/master.key
+
+sismobase/.DS_Store
+sismobase/.byebug_history
+
+
+####### client #######
+# dependencies
+sismoclient/node_modules
+sismoclient/.pnp
+sismoclient/.pnp.js
+
+# testing
+sismoclient/coverage
+
+# production
+sismoclient/build
+
+# Ignore mysql-data
+/.mysql-data
+
+# misc
+sismoclient/.DS_Store
+sismoclient/.env.local
+sismoclient/.env.development.local
+sismoclient/.env.test.local
+sismoclient/.env.production.local
+
+sismoclient/npm-debug.log*
+sismoclient/yarn-debug.log*
+sismoclient/yarn-error.log*

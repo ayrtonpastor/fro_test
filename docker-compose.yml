@@ -1,0 +1,45 @@
+version: '2'
+services:
+  sismodb:
+    image: mysql:8
+    volumes:
+      - "./.mysql-data/sismodb:/var/lib/mysql"
+    restart: always
+    ports:
+      - "3307:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - frogmi-test
+  sismobase:
+    build: ./sismobase/
+    command: bash -c "yarn install --check-files && rm -f tmp/pids/server.pid && bundle exec rails s -p 5000 -b '0.0.0.0'"
+    volumes:
+      - ./sismobase/:/sismobase
+    ports:
+      - "5000:5000"
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_HOST: sismodb
+    depends_on:
+      - sismodb
+    networks:
+      - frogmi-test
+  sismoclient:
+    build: sismoclient
+    image: react-client
+    command: sh -c "npm install && npm start"
+    ports:
+      - "4000:4000"
+    working_dir: /sismoclient
+    volumes:
+      - ./sismoclient:/sismoclient
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - frogmi-test
+networks:
+  frogmi-test:
+    external: true
