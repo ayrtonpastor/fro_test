@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "ebad27fd-3938-4052-aff7-eac0501c7f6c",
+		"name": "Sismobase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15401532"
+	},
+	"item": [
+		{
+			"name": "Lista de features",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/features?page=1&per_page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"features"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de features utilizando filtro opcional",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/features?page=1&per_page=2&mag_type=md",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"features"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "2"
+						},
+						{
+							"key": "mag_type",
+							"value": "md"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un comment asociado a un feature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"body\": \"This is a comment\" }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/features/comments/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"features",
+						"comments",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar feature",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/features/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"features",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
