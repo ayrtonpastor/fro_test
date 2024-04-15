@@ -1,0 +1,278 @@
+/* App.css */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+#header {
+  background-color: #282c34;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Establece la altura del contenedor de carga para que ocupe toda la altura del contenedor principal */
+}
+
+#loading {
+  width: 70px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.mensaje {
+  color: #61dafb;
+  margin-left: 20px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.features-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: center; /* Centrar elementos verticalmente */
+}
+
+.feature-item {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1da1f2; /* Color del título similar al de la vista anterior */
+}
+
+.feature-place {
+  font-size: 1rem;
+  color: #666; /* Color del lugar similar al de la vista anterior */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.feature-card .ver-button {
+  margin: 10px auto; /* Centra el botón horizontalmente con un margen de 10px arriba y abajo */
+  display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+  width: fit-content; /* Ajusta el ancho del botón al contenido */
+}
+
+.ver-button {
+  background-color: #1da1f2; /* Color de fondo similar al de la vista anterior */
+  color: #fff; /* Color del texto similar al de la vista anterior */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px; /* Agrega margen alrededor del botón */
+  display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+}
+
+.ver-button:hover {
+  background-color: #0e71a6;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio entre la lista de elementos y los botones de paginación */
+}
+
+.pagination-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 0 5px; /* Espacio entre los botones */
+  cursor: pointer;
+}
+
+.pagination-button:hover {
+  background-color: #0e71a6;
+}
+
+/* Feature.css */
+
+.feature-card .info-link-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feature-card .info-link-container a {
+  font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos para la parte superior */
+.feature-info {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.feature-info span {
+  font-weight: bold;
+  color: #1da1f2;
+}
+
+.feature-info:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos para el botón "Volver" */
+#volver {
+  max-width: 80px;
+  margin-bottom: 10px;
+  background-color: #1da1f2; /* Color de fondo similar a otros botones */
+  color: #fff; /* Color de texto blanco */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para los datos del Feature */
+.feature-card {
+  width: 100%; /* Ancho completo para la tarjeta */
+  max-width: 24rem; /* Ajusta el ancho máximo de la tarjeta según sea necesario */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feature-card .card-title {
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.feature-card .card-text {
+  padding: 10px;
+}
+
+.feature-card hr {
+  border-color: #ccc;
+}
+
+.comment-section {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-input {
+  width: calc(100% - 20px); /* Ajusta el ancho para dejar espacio al botón */
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.submit-button {
+  align-self: flex-end; /* Alinea el botón a la derecha */
+  max-width: 200px;
+  margin-bottom: 10px;
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0e71a6;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* Ajusta el ancho de la lista de comentarios */
+}
+
+.comment-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden; /* Evita que los elementos internos se desborden */
+}
+
+.comment-content {
+  padding: 10px;
+}
+
+.comment-body {
+  margin: 0;
+  text-align: left;
+}
+
+.comment-date {
+  float: right; /* Alinea la fecha a la derecha */
+  font-size: 12px;
+  color: #666;
+  margin: 5px; /* Agrega un espacio entre la fecha y el borde del contenedor */
+}
