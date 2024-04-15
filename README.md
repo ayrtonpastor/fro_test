@@ -29,3 +29,4 @@ El proyecto está dockerizado y se encuentra dividido en 3 servicios: sismodb, s
 ## Consideraciones
 * En caso la ruta de la app frontend no sea http://172.22.0.3:3000/ , deberá actualizar la url en la linea 18 del archivo `sismobase/config/application.rb` el cuál le da acceso a frontend de acceder al backend
 * Los modelos features y comentarios tienen las validaciones necesarias acordes a los requerimientos del ejercicio.
+* Los endpoints de backend pueden ser probados con Postman importando la colección sismobase ubicada en `sismobase/Sismobase.postman_collection.json`
