@@ -15,7 +15,7 @@ module Sismobase
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://172.22.0.3:3000'
+        origins 'http://172.24.0.3:3000'
         resource '/api/*', headers: :any, methods: %i[get post patch options delete], credentials: true
       end
     end

@@ -36,7 +36,7 @@ export default function Feature() {
 		setTimeout(() => {
 			fetchData();
 		}, CONFIG.loading_timeout_ms);
-	}, []);
+	}, [featureId]);
 
 	const fixNumber = (number) => {
 		return (Math.round(number * 100) / 100).toFixed(2);
