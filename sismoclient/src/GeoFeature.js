@@ -79,7 +79,7 @@ export default function Feature() {
 							id="volver"
 							variant="danger"
 							onClick={() => {
-								navigate("/");
+								navigate(-1);
 							}}
 						>
 							<BsArrowLeft className="back-icon" /> Volver
